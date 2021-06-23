@@ -14,7 +14,7 @@
 - [Python【目次】](./python/index.md)
 - JavaScript【目次】
 - エクセル・VBA【目次】
-- Linux【目次】
+- [Linux【目次】](./linux/index.md)
 - 自動化技術【目次】
 - サーバ技術【目次】
 - IoT【目次】

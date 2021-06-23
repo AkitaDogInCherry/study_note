@@ -1,6 +1,6 @@
 # 環境構築
 
-[Pythonのトップへ](./index.md)
+[Pythonのトップへ](./../index.md)
 
 ## venvによる仮想環境
 
