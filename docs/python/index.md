@@ -1,16 +1,27 @@
-# Python
+# ドキュメント作成
 
-ツールプログラムであるPythonについての記録。
+このページはGitHub Pagesというサービスを使用し、装飾が簡単にできるMarkdownという記法を用いて作成している。
+ここではGitHubやGitHub Pagesの使い方、Markdownなどについて説明する。
 
 # 目次
 
-## はじめに
+## Git
 
-- [全体的な環境構築](./env.md)
-- [venvによる仮想環境](./venv.md)
+GitHubはGitという仕組みを使い、ソースコードやドキュメントの共有を行うサービスである。
 
-## Tips
+文書未作成。
 
-- [リストファイルを使ってライブラリをインストールする](./install_requirements.md)
-- [ライブラリの依存関係・ライセンスを調べる](./check_dependencies.md)
-- [ネットに繋げないPCでライブラリをインストールする](./install_offline.md)
+## GitHub
+
+GitHub Pagesは、GitHubのサービスの1つである。
+
+文書未作成。
+
+## GitHub Pages
+
+- [ページのタイトル・テーマなどの設定](./pages/config.md)
+
+## Markdown
+
+文書未作成。
+
