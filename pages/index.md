@@ -11,7 +11,7 @@
 【目次】と書かれた項目は更に細かい目次がある。
 
 - [ドキュメント作成【目次】](./documentation/index.md)
-- Python【目次】
+- [Python【目次】](./python/index.md)
 - JavaScript【目次】
 - エクセル・VBA【目次】
 - Linux【目次】
