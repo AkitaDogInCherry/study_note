@@ -11,7 +11,7 @@
 
 Markdownファイル内で、
 
-````markdown
+````pandoc
 
 ```(言語名):(ファイル名)
 
@@ -25,18 +25,21 @@ Markdownファイル内で、
 
 更に、最初のバッククォーテーションの後に言語名をつけると、その言語ごとのシンタックスハイライトを行ってくれる。
 
-よく使われるものは省略名があることもある。以下によく使うものを示す。
+[ここ](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml)にあるymlファイルの、「言語そのものの文字列」または「aliasesに書かれている文字列」が使用できる。
 
-| 言語など | 記述名・省略名 |
+以下に代表的なものを示す。
+Qiitaなどとは、使用できる名前が少しずつ異なっているので注意。
+
+| 言語など | 記述名 |
 |:-:|:-:|
-| Windowsのコマンドプロンプトなど | console |
-| Linuxのシェル、bashなど | shell / bash / sh |
-| WindowsのPowerShell | posh |
-| Python | python / py |
-| VBA | visualbasic / vb |
-| C# | csharp / c# / cs |
-| JSON | json |
-| YAML | yaml / yml |
+| Windowsのコマンドプロンプト | sh / bash |
+| Linuxのシェル、bashなど | sh / bash |
+| WindowsのPowerShell | PowerShell / posh |
+| Python | Python |
+| VBA | VBA |
+| Markdown| Markdown / pandoc |
+| JSON | JSON |
+| YAML | YAML / yml |
 
 ## 言語ごとの例
 
@@ -44,9 +47,9 @@ Markdownファイル内で、
 
 #### Markdownの記述
 
-````markdown
+````pandoc
 
-```py:main.py
+```Python:main.py
 
 def __main__():
     print("Hello, World!")
@@ -57,20 +60,20 @@ def __main__():
 
 #### 表示
 
-```py:main.py
+```Python:main.py
 
 def __main__():
     print("Hello, World!")
 
 ```
 
-### Console
+### コンソール
 
 #### Markdown
 
-````markdownの記述
+````pandoc
 
-```console
+```sh
 
 python -m pip install matplotlib
 
@@ -80,7 +83,7 @@ python -m pip install matplotlib
 
 #### 表示
 
-```console
+```sh
 
 python -m pip install matplotlib
 
@@ -89,3 +92,9 @@ python -m pip install matplotlib
 ## 差分の表示
 
 更に、ソースコードの先頭に - や + をつけると差分を表現することができる。
+
+
+## 参考ページ
+
+- [[GitHub] Markdownの「シンタックスハイライト」に対応している言語一覧](https://blog.katsubemakito.net/articles/github-markdown-syntaxhighlighting)
+- [GitHubでサポートしている言語](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml)
