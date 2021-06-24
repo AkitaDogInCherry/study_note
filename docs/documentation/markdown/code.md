@@ -7,11 +7,9 @@
 
 プログラミングの上では重要な機能であるが、Markdownにはソースコードのシンタックスハイライトを行う機能がある。
 
-
-
 Markdownファイル内で、
 
-````pandoc
+````console
 
 ```(言語名):(ファイル名)
 
@@ -25,21 +23,25 @@ Markdownファイル内で、
 
 更に、最初のバッククォーテーションの後に言語名をつけると、その言語ごとのシンタックスハイライトを行ってくれる。
 
-[ここ](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml)にあるymlファイルの、「言語そのものの文字列」または「aliasesに書かれている文字列」が使用できる。
+※ただし、GitHub Pagesでテーマを使用している場合、デフォルトではシンタックスハイライトがうまく動作しない。テーマを設定した上でのシンタックスハイライトは[こちらのページ](./index.md)を参照のこと。
 
-以下に代表的なものを示す。
-Qiitaなどとは、使用できる名前が少しずつ異なっているので注意。
+※より詳しくは、シンタックスハイライトを行う「[Rouge](http://rouge.jneen.net/)」という技術を使用している。
 
-| 言語など | 記述名 |
+[ここ](https://github.com/rouge-ruby/rouge/wiki/List-of-supported-languages-and-lexers)にあるymlファイルの、「言語そのものの文字列」または「aliasesに書かれている文字列」が使用できる。
+
+以下に代表的なものを示す。略称を使用してもよい。
+GitHubなどとは、使用できる名前が少しずつ異なっているので注意。
+
+| 言語など | 記述名・略称 |
 |:-:|:-:|
-| Windowsのコマンドプロンプト | sh / bash |
+| Windowsのコマンドプロンプト | console / sh / bash |
 | Linuxのシェル、bashなど | sh / bash |
-| WindowsのPowerShell | PowerShell / posh |
-| Python | Python |
-| VBA | VBA |
-| Markdown| Markdown / pandoc |
-| JSON | JSON |
-| YAML | YAML / yml |
+| WindowsのPowerShell | powerShell / posh |
+| Python | python / py |
+| VBA | vb |
+| Markdown| markdown / md |
+| JSON | json |
+| YAML | yaml / yml |
 
 ## 言語ごとの例
 
@@ -47,9 +49,9 @@ Qiitaなどとは、使用できる名前が少しずつ異なっているので
 
 #### Markdownの記述
 
-````pandoc
+````console
 
-```Python:main.py
+```py:main.py
 
 def __main__():
     print("Hello, World!")
@@ -60,7 +62,7 @@ def __main__():
 
 #### 表示
 
-```Python:main.py
+```py:main.py
 
 def __main__():
     print("Hello, World!")
@@ -71,9 +73,9 @@ def __main__():
 
 #### Markdown
 
-````pandoc
+````console
 
-```sh
+```console
 
 python -m pip install matplotlib
 
@@ -83,7 +85,7 @@ python -m pip install matplotlib
 
 #### 表示
 
-```sh
+```console
 
 python -m pip install matplotlib
 
@@ -96,5 +98,4 @@ python -m pip install matplotlib
 
 ## 参考ページ
 
-- [[GitHub] Markdownの「シンタックスハイライト」に対応している言語一覧](https://blog.katsubemakito.net/articles/github-markdown-syntaxhighlighting)
-- [GitHubでサポートしている言語](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml)
+- [Rouge - List of supported languages and lexers](https://github.com/rouge-ruby/rouge/wiki/List-of-supported-languages-and-lexers)
