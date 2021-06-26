@@ -18,7 +18,7 @@ Linuxはサーバとして使われることも多いが、ここではクライ
 - [基本的な用語](./introduction/terms.md)
 - [Linuxのフォルダ構成](./introductioin/folder.md)
 - [Raspberry PI](./introduction/raspberry_pi.md)
-- [Windowsからリモートで操作する](./introduction/remote_operation.md)
+- [WindowsからSSH接続で操作する](./introduction/remote_operation.md)
 
 
 

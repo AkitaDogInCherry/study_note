@@ -202,6 +202,8 @@ Wi-Fi内蔵のRaspberry Piを使用する場合は設定しておいた方が良
 
 ### Wi-Fi接続(暫定)
 
+#### アクセスポイント情報の記載
+
 無線LANアクセスポイントの情報を取得するには、
 
 ```sh
@@ -222,8 +224,83 @@ Wi-Fi内蔵のRaspberry Piを使用する場合は設定しておいた方が良
 
 使用したい無線LANアクセスポイント名があるか確認。
 
+Wi-Fi設定は、/etc/wpa_supplicant/wpa_supplicant.confファイル内にある。
+
+これに、簡易テキストエディタnano（Raspberry piに標準で入っている）でアクセスポイントの情報を追記する。
+
+```sh
+
+~ $ sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+
+```
+
+でエディタを開き、
+
+```sh:/etc/wpa_supplicant/wpa_supplicant.conf
+
+network={
+ssid="ssid" # 接続する予定のWi-FiのSSID
+psk="password"　# パスワード
+key_mgmt=WPA-PSK
+}
+
+```
+
+を追記し、Ctrl+X → 保存しますか？>Yで閉じる。（sudoで実行しないと書き込み権限がなく保存できない）
+
+WPA-PSKは暗号化モードの種類の1つ「WPA/WPA2-PSK(AES)」であるという意味。
+
+パスワードは平文で書いておくと万一見られた場合にネットワークのパスワードが洩れてしまうので本当は良くないが、一応上記のセキュリティ対策を施しているので一旦良しとする。パスワードを暗号化して記載する方法を後述する。
+
+ファイルを保存後、
+
+```sh
+
+reboot
+
+```
+
+で再起動する。
+
+#### アクセスの確認
+
+正しく接続されているかを確認する方法はいくつかあり、
+
+```sh
+
+~ $ ping www.google.com
+
+```
+
+pingコマンドで適当なサイトにアクセスし、レスポンスを確認する方法や、
+
+```sh
+
+~ $ ip addr
+
+```
+
+でIPアドレスを確認する方法がある。
+
+#### 手動でのWi-Fiへの接続、切断
+
+上記の設定が行われていれば、Wi-Fiへは起動時に自動接続してくれる。
+
+何らかの理由で手動で接続・切断したい場合は
+
+```sh
+
+~ $ sudo ifconfig wlan0 up # 接続
+
+~ $ sudo ifconfig wlan0 down # 切断
+
+```
+
+で手動での操作が可能。
 
 ### Wi-Fi接続(パスワードの暗号化)
+
+作成中。
 
 
 ## 参考ページ
@@ -232,6 +309,7 @@ Wi-Fi内蔵のRaspberry Piを使用する場合は設定しておいた方が良
 - [Raspbian Liteの初期設定 令和2年(2020年)3月版](https://denor.jp/raspbian-lite%E3%81%AE%E5%88%9D%E6%9C%9F%E8%A8%AD%E5%AE%9A-%E4%BB%A4%E5%92%8C2%E5%B9%B42020%E5%B9%B43%E6%9C%88%E7%89%88)
 - [RaspberryPiのキーボード入力の日本語化](https://qiita.com/sukinasaki/items/426068d6e87169fa3d88)
 - [Raspberry Pi公式 - Setting up a wireless LAN via the command line](https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md)
+- [Raspberry Pi のWi-Fi設定（初期設定）](https://raspida.com/wifi4raspbian)
 
 
 
