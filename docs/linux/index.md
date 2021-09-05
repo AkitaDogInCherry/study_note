@@ -16,9 +16,12 @@ Linuxはサーバとして使われることも多いが、ここではクライ
 ## はじめに
 
 - [基本的な用語](./introduction/terms.md)
+- [VMWare Workstation Playerについて](./introduction/vmware.md)
 - [Linuxのフォルダ構成](./introductioin/folder.md)
-- [Raspberry PI](./introduction/raspberry_pi.md)
-- [WindowsからSSH接続で操作する](./introduction/remote_operation.md)
+- [【旧】Raspberry PI](./introduction/raspberry_pi.md)
+- [【旧】WindowsからSSH接続で操作する](./introduction/remote_operation.md)
 
+## ROS
 
-
+- [ROSとは](./ros/introduction.md)
+- [VMWare上のLinuxにROS環境を構築する](./ros/environment.md)
